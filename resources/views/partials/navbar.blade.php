@@ -9,24 +9,7 @@
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">AGventure</a>
               </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">HOME</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">WHO WE ARE</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">WHAT WE DO</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">HOW WE DELIVER</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">SUCCESS STORIES</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">AUTHORS</a>
-          </li>
+          
           {{-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
@@ -44,9 +27,16 @@
         </ul>
 
         <ul class="list-group">
+        <div class="d-flex justify-content-start align-items-center">
         <li class="nav-item" > <a class="nav-link" href="{{ route("login") }}">Log In</a></li>
-
         <li class="nav-item"> <a class="nav-link" href="{{ route("register") }}">Register</a></li>
+        @auth
+            <form method ="POST" action = "{{ route('logout')}}">
+            @csrf
+            <button type="submit" class="btn btn-outline-primary"> Log Out</button>
+            </form>
+        @endauth
+        </div>
         </ul>
 
 

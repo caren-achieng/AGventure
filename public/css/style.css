@@ -1,3 +1,6 @@
+body{
+    min-height:100vh;
+}
 .footer{
     background-color: rgb(141, 214, 141);
     color:rgb(0, 0, 0);
@@ -6,12 +9,6 @@
     left: 0;
     bottom: 0;
    }
-
-nav.navbar{
-    background-color: rgb(141, 214, 141)!important;
-    color:rgb(0, 0, 0)!important;
-
-}
 
 ul.list-group li{
     list-style:none;
@@ -23,14 +20,28 @@ img {
     /* object-fit: cover; */
     }
 
-#register,
-#login
-{
-    background: url('/imgs/farmeronphone.jpg') no-repeat;
-    background-size:cover;
-}
-
 #register .card,
 #login .card{
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+#login .farmer{
+    position:relative;
+
+}
+#login .farmer img{
+    /* border-top-left-radius:50%; */
+    /* background-color:turquoise; */
+    position:absolute;
+    bottom:0;
+    /* width:auto; */
+    height:25rem;
+    right:0;
+    object-fit:cover;
+
+}
+.signinbutton,
+.registerbutton{
+    border-radius:20rem;
+
 }
