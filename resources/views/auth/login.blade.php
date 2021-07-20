@@ -45,18 +45,27 @@
                                         </label>
                                     </div>
 
-                            <div class="form-group mb-0">
+                            <div class="form-group mb-3">
                                     <button type="submit" class="btn btn-primary col-12 signinbutton">
                                         {{ __('Login') }}
                                     </button>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group d-flex align-item-center justify-content-between">
+
 
                                     @if (Route::has('password.request'))
-                                        <a class="btn btn-link p-0"  href="{{ route('password.request') }}">
+                                        <a class="btn btn-link p-0 small"  href="{{ route('password.request') }}">
                                             {{ __('Forgot Your Password?') }}
                                         </a>
                                     @endif
+                                    <span >
+                                        Don't have an account?
+                                        <a class="btn btn-link p-0 "  href="{{ route('register') }}">
+                                            {{ __('Register.') }}
+                                        </a>
+                                    </span>
+
+
 </div>
                         </form>
     </div>

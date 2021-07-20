@@ -1,24 +1,42 @@
-@extends('layouts.master')
+@extends('layouts.app')
 @section('content')
-<div>
-{{-- <h1>Home</h1> --}}
-    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src={{ asset('imgs/tomatos.jpg')}} class="d-block w-100" alt="Tomatoes">
-        </div>
-        <div class="carousel-item">
-        <img src={{ asset('imgs/market.jpg')}} class="d-block w-100" alt="Market">
-      </div>
-      <div class="carousel-item">
-        <img src={{ asset('imgs/potatos.jpg')}} class="d-block w-100" alt="Potatoes">
-      </div>
-      <div class="carousel-item">
-        <img src={{ asset('imgs/garlic.jpg')}} class="d-block w-100" alt="Garlic">
-      </div>
-    </div>
-   
-  </div>
-    </div>
-<div>
+
+
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb bg-white">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">Dashboard</h4>
+                    </div>
+                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                        <div class="d-md-flex">
+                            <ol class="breadcrumb ms-auto">
+                                <li><a href="#" class="fw-normal">Dashboard</a></li>
+                            </ol>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+
+        
 @endsection
