@@ -1,4 +1,4 @@
-body{
+/* body{
     min-height:100vh;
 }
 .footer{
@@ -17,31 +17,46 @@ ul.list-group li{
 img {
     width: 100%;
     height: 100%;
-    /* object-fit: cover; */
+
     }
 
-#register .card,
-#login .card{
-    background-color: rgba(0, 0, 0, 0.5);
-}
+
 
 #login .farmer{
     position:relative;
 
 }
 #login .farmer img{
-    /* border-top-left-radius:50%; */
-    /* background-color:turquoise; */
+
     position:absolute;
     bottom:0;
-    /* width:auto; */
+
     height:25rem;
     right:0;
     object-fit:cover;
 
+}
+*/
+#register .card,
+#login .card{
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .signinbutton,
 .registerbutton{
     border-radius:20rem;
 
 }
+
+#myfeed .card img
+{
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+}
+#articles .card
+{
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+}
+

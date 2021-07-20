@@ -8,7 +8,7 @@
                 <div class="card my-5">
                     <div class="card-header text-center text-white"><h4>{{ __('JOIN AGVENTURE TODAY') }}</h4></div>
 
-                    <div class="card-body text-light">
+                    <div class="card-body text-light ">
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
 
