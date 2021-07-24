@@ -1,12 +1,11 @@
 <?php
 
 
+use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\UploadFileController;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\ArticlesController;
-use App\Http\Controllers\CreateArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,30 +20,30 @@ use App\Http\Controllers\CreateArticleController;
 
 Auth::routes();
 
-//home
-Route::get('/', function () {
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/farmer/{id}', [PostController::class, 'index'])->name('farmer');
+
+
+
+//Dashboard
+Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware('auth')->name('home');
+})->middleware('auth')->name('dashboard');
 
 //uploading a picture
 Route::get('/upload', function() {
     return view('upload');
 })->name('upload');
 
-Route::post('/my-upload',[UploadFileController::class, 'upload'])->name('my_upload');
-
-//looking at feed
-Route::get('/posts', [PostController::class,'index'])->name('posts');
-
-//creating articles
-Route::get('/writearticles', function() {
-    return view('createarticle');
-})->name('createarticle');
-
-Route::post('/writing-articles',[CreateArticleController::class, 'create'])->name('written_articles');
-
-//looking at articles
-Route::get('/articles', [ArticlesController::class,'index'])->name('articles');
-
+Route::prefix('/posts')->name('posts.')->group(function() {
+    Route::get('/', [\App\Http\Controllers\Admin\PostController::class,'index'])->name('index');
+    Route::get('/create', [\App\Http\Controllers\Admin\PostController::class,'create'])->name('create');
+    Route::post('/store',[\App\Http\Controllers\Admin\PostController::class, 'store'])->name('store');
+});
+Route::prefix('/articles')->name('articles.')->group(function() {
+    Route::get('/', [ArticleController::class, 'index'])->name('index');
+    Route::get('/create', [ArticleController::class, 'create'])->name('create');
+    Route::post('/store', [ArticleController::class, 'store'])->name('store');
+});
 
 

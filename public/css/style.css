@@ -1,42 +1,17 @@
-/* body{
-    min-height:100vh;
-}
-.footer{
-    background-color: rgb(141, 214, 141);
-    color:rgb(0, 0, 0);
-    width: 100%;
-    text-align: left;
-    left: 0;
-    bottom: 0;
-   }
-
-ul.list-group li{
-    list-style:none;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-img {
-    width: 100%;
+html, body {
     height: 100%;
-
-    }
-
-
-
-#login .farmer{
-    position:relative;
-
+    width: 100%;
 }
-#login .farmer img{
 
-    position:absolute;
-    bottom:0;
-
-    height:25rem;
-    right:0;
-    object-fit:cover;
-
+#home .farmer img {
+    width: 100%;
 }
-*/
 #register .card,
 #login .card{
     background-color: rgba(0, 0, 0, 0.5);

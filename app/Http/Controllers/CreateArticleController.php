@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Models\Articles;
+use App\Models\Article;
 
 class CreateArticleController extends Controller
 {
@@ -13,14 +13,14 @@ class CreateArticleController extends Controller
      */
     public function one()
     {
-        return view('createarticle');
+
         //->with('articles',Articles::orderBy('updated_at','DESC')->get());
     }
 
 
         public function create(Request $req){
             $data=$req->only('title','content');
-            Articles::create($data);
+            Article::create($data);
             // dd($data);
            return redirect()->route('articles');
         }

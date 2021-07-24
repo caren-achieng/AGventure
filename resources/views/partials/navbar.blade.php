@@ -10,7 +10,7 @@
                     <ul id="sidebarnav">
                         <!-- User Profile-->
                         <li class="sidebar-item pt-2">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ Route('home') }}"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ Route('dashboard') }}"
                                 aria-expanded="false">
                                 <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Dashboard</span>
@@ -18,7 +18,7 @@
                         </li>
 
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ Route('posts') }}"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ Route('posts.index') }}"
                                 aria-expanded="false">
                                 <i class="fa fa-table" aria-hidden="true"></i>
                                 <span class="hide-menu">Posts</span>
@@ -26,10 +26,18 @@
                         </li>
 
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ Route('articles') }}"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ Route('articles.index') }}"
                                 aria-expanded="false">
                                 <i class="fa fa-font" aria-hidden="true"></i>
                                 <span class="hide-menu">Articles</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ Route('home') }}"
+                                aria-expanded="false">
+                                <i class="fas fa-home" aria-hidden="true"></i>
+                                <span class="hide-menu">Client</span>
                             </a>
                         </li>
                         <li class="sidebar-item">

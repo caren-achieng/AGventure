@@ -33,12 +33,10 @@
     @include('partials.navbar')
     @endauth
 
-
-
     @yield('content')
     @if(!Route::is('login')&&!Route::is('register'))
 
-    @include("partials.footer")
+    @include("admin.partials.footer")
     @endif
     </div>
 
