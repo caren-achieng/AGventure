@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
     public function run() {
         $this->call(UserSeeder::class);
 
-        User::factory()->count(50)
+        User::factory()->count(10)
             ->create()->each(function($user) {
                 if($user->is_admin) {
                     Post::factory()->create([

@@ -12,7 +12,7 @@ class HomeController extends Controller {
      * @return Renderable
      */
     public function index(): Renderable {
-        $data['farmers'] = User::where('is_admin', true)->latest('id')->paginate(5);
+        $data['farmers'] = User::where('is_admin', true)->latest('id')->paginate(8);
 
         return view('home', $data);
     }
