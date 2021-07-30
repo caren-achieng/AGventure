@@ -1,4 +1,4 @@
-<php?
+<?php
 
 namespace App\Models;
 
@@ -20,3 +20,4 @@ class Article extends Model
         return $this->belongsTo(User::class);
     }
 }
+?>
