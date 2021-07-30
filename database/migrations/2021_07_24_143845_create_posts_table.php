@@ -17,7 +17,7 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('product_name');
-            $table->string('product_price');
+            $table->string('price');
             $table->string('stock');
             $table->string('description');
             $table->string('image');
