@@ -45,7 +45,13 @@
                                     @endforeach
                                 </div>
                             @else
-                                No Posts
+                                <div class="row h-100 align-items-center justify-content-center">
+                                    <div class="col-auto">
+                                        <hr>
+                                        <h1>No Posts</h1>
+                                        <hr>
+                                    </div>
+                                </div>
                             @endif
                         </div>
                         <div class="tab-pane fade" id="articles" role="tabpanel" aria-labelledby="articles-tab">
