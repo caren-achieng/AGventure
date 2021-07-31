@@ -13,11 +13,8 @@
     <meta name="robots" content="noindex,nofollow">
     <title>{{ config('app.name', 'AGventure') }}</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    {{-- <link rel="stylesheet" href="{{ asset('css/style.css') }}"> --}}
-
-    <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/"/>
+    {{--    BOOTSTRAP    --}}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-5.0.2/bootstrap.min.css') }}">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
     <!-- Custom CSS -->

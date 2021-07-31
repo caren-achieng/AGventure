@@ -16,9 +16,8 @@ class ArticleController extends Controller
      *
      * @return Response
      */
-    public function index()
-    {
-        $data['articles'] = Article::select(['title','content'])->get();
+    public function index(): Response {
+        $data['articles'] = Auth::user()->articles()->latest()->get();
 
         return response()->view('admin.articles.index',$data);
     }
@@ -83,11 +82,12 @@ class ArticleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return Response
+     * @param int $id
+     * @return RedirectResponse
      */
-    public function destroy($id)
-    {
-        //
+    public function destroy(int $id): RedirectResponse {
+        Article::destroy($id);
+
+        return back();
     }
 }

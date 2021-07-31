@@ -16,9 +16,9 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnUpdate()->cascadeOnDelete();
-            $table->string('product_name');
-            $table->string('price');
-            $table->string('stock');
+            $table->string('title', 100);
+            $table->float('price');
+            $table->smallInteger('stock');
             $table->string('description');
             $table->string('image');
             $table->timestamps();

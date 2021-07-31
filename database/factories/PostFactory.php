@@ -23,11 +23,11 @@ class PostFactory extends Factory
     public function definition(): array {
         return [
             'user_id' => User::factory(),
-            'product_name' => $this->faker->word,
-            'product_price' => $this->faker->randomFloat(2, 0, 5000),
+            'title' => $this->faker->word,
+            'price' => $this->faker->randomFloat(2, 0, 5000),
             'description' => $this->faker->text,
             'image' => $this->faker->unique()->image(public_path('images/posts'), 600, 480, null, false),
-            'stock' => $this->faker->randomDigit() . 'Kg'
+            'stock' => $this->faker->randomDigit()
         ];
     }
 }
