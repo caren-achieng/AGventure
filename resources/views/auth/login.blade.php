@@ -5,7 +5,7 @@
     <div id="login">
         <div class="row justify-content-center align-items-center vh-100">
             <div class="card col-auto">
-                <div class="card-header text-center text-white"><h4>{{ __('🙆🏽 Start your journey with AGventure 🙆🏽') }}</h4></div>
+                <div class="card-header text-center text-white"><h4>{{ __('😁 Start your journey with AGventure 😁') }}</h4></div>
                 <div class="card-body row text-light">
                     <div class="col-5">
                         <div class="my-5">
